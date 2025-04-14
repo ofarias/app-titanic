@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Predicción Titanic</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='estilos.css')}}">
+</head>
+<body>
+    <h2>¿Habrías sobrevivido en el Titanic?</h2>
+    <form action="/predecir" method="post">
+    Sexo (0 = Hombre, 1 = Mujer): <input type="number" name="sexo" min="0" max="1" required><br><br>
+    Clase (1 = 1ra, 2 = 2da, 3 = 3ra): <input type="number" name="clase" min="1" max="3" required><br><br>
+    Edad: <input type="number" step="any" name="edad" min="0" required><br><br>
+    Número de hermanos/esposos: <input type="number" name="sibsp" min="0" required><br><br>
+    Número de padres/hijos: <input type="number" name="parch" min="0" required><br><br>
+    Tarifa pagada: <input type="number" step="any" name="fare" min="0" required><br><br>
+    Puerto de embarque (0 = Cherbourg, 1 = Queenstown, 2 = Southampton): <input type="number" name="embarque" min="0" max="2" required><br><br>
+    <input type="submit" value="Predecir">
+</form>
+</body>
+</html>
