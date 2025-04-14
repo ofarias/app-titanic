@@ -8,9 +8,13 @@ modelo = joblib.load('modelo_titanic.pkl')  # Ajusta la ruta si tu modelo está 
 # Crear la app
 app = Flask(__name__)
 
-# Ruta principal
+#Ruta de Bienvenida
 @app.route('/')
-def home():
+def welcome():
+    return render_template('welcome.html')
+# Ruta principal
+@app.route('/formulario')
+def formulario():
     return render_template('index.html')
 
 # Ruta de predicción
